@@ -1,10 +1,10 @@
-package com.fintech.admin_dashboard;
+package com.ykaancan.fintechadmindashboard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AdminDashboardApplicationTests {
+class FintechAdminDashboardApplicationTests {
 
 	@Test
 	void contextLoads() {
