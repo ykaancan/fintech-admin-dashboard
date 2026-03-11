@@ -1,13 +1,13 @@
-package com.fintech.admin_dashboard;
+package com.ykaancan.fintechadmindashboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AdminDashboardApplication {
+public class FintechAdminDashboardApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdminDashboardApplication.class, args);
+		SpringApplication.run(FintechAdminDashboardApplication.class, args);
 	}
 
 }

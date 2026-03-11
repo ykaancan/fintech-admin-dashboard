@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fintech_admin_db
+  jpa:
+    show-sql: true
