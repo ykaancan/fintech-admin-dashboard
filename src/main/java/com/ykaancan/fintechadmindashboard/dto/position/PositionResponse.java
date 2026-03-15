@@ -15,6 +15,7 @@ public record PositionResponse(
         BigDecimal currentPrice,
         BigDecimal marketValue,
         BigDecimal unrealizedPnl,
+        BigDecimal realizedPnl,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 ) {}

@@ -16,6 +16,7 @@ public record TransactionResponse(
         BigDecimal price,
         BigDecimal fee,
         BigDecimal totalAmount,
+        BigDecimal realizedPnl,
         String notes,
         LocalDateTime executedAt,
         LocalDateTime createdAt

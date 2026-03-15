@@ -105,6 +105,7 @@ public class PositionService {
                 currentPrice,
                 marketValue,
                 unrealizedPnl,
+                position.getRealizedPnl(),
                 position.getCreatedAt(),
                 position.getUpdatedAt()
         );

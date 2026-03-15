@@ -37,6 +37,10 @@ public class Position {
     @Column(name = "avg_cost_basis", nullable = false, precision = 19, scale = 4)
     private BigDecimal avgCostBasis;
 
+    @Builder.Default
+    @Column(name = "realized_pnl", nullable = false, precision = 19, scale = 4)
+    private BigDecimal realizedPnl = BigDecimal.ZERO;
+
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
