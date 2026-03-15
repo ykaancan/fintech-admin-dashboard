@@ -1,5 +1,7 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/fintech_admin_db
+    username: postgres
+    password: postgres
   jpa:
     show-sql: true
