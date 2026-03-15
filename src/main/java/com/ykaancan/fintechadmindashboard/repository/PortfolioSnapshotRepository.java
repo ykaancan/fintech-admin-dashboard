@@ -16,6 +16,8 @@ public interface PortfolioSnapshotRepository extends JpaRepository<PortfolioSnap
     Page<PortfolioSnapshot> findByPortfolioId(UUID portfolioId, Pageable pageable);
     List<PortfolioSnapshot> findByPortfolioIdAndSnapshotDateBetween(
             UUID portfolioId, LocalDate startDate, LocalDate endDate);
+    List<PortfolioSnapshot> findByPortfolioIdAndSnapshotDateBetweenOrderBySnapshotDateAsc(
+            UUID portfolioId, LocalDate startDate, LocalDate endDate);
     Optional<PortfolioSnapshot> findByPortfolioIdAndSnapshotDate(
             UUID portfolioId, LocalDate snapshotDate);
 }
