@@ -46,6 +46,9 @@ public class Transaction {
     @Column(name = "total_amount", nullable = false, precision = 19, scale = 4)
     private BigDecimal totalAmount;
 
+    @Column(name = "realized_pnl", precision = 19, scale = 4)
+    private BigDecimal realizedPnl;
+
     private String notes;
 
     @Column(name = "executed_at", nullable = false)

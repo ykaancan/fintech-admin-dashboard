@@ -4,6 +4,7 @@ import com.ykaancan.fintechadmindashboard.dto.common.PagedResponse;
 import com.ykaancan.fintechadmindashboard.dto.transaction.CreateTransactionRequest;
 import com.ykaancan.fintechadmindashboard.dto.transaction.TransactionResponse;
 import com.ykaancan.fintechadmindashboard.enums.TransactionType;
+import com.ykaancan.fintechadmindashboard.service.TradeRecordService;
 import com.ykaancan.fintechadmindashboard.service.TransactionService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.PageRequest;
@@ -19,15 +20,18 @@ import java.util.UUID;
 public class TransactionController {
 
     private final TransactionService transactionService;
+    private final TradeRecordService tradeRecordService;
 
-    public TransactionController(TransactionService transactionService) {
+    public TransactionController(TransactionService transactionService,
+                                 TradeRecordService tradeRecordService) {
         this.transactionService = transactionService;
+        this.tradeRecordService = tradeRecordService;
     }
 
     @PostMapping
     public ResponseEntity<TransactionResponse> createTransaction(
             @Valid @RequestBody CreateTransactionRequest request) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(transactionService.createTransaction(request));
+        return ResponseEntity.status(HttpStatus.CREATED).body(tradeRecordService.executeTrade(request));
     }
 
     @GetMapping("/{id}")

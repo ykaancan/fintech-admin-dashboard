@@ -97,6 +97,7 @@ public class TransactionService {
                 transaction.getPrice(),
                 transaction.getFee(),
                 transaction.getTotalAmount(),
+                transaction.getRealizedPnl(),
                 transaction.getNotes(),
                 transaction.getExecutedAt(),
                 transaction.getCreatedAt()
